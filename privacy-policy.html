@@ -30,27 +30,34 @@
       <p>This version of Honest Stress Tracker does not create accounts, does not offer in-app purchases or subscriptions, and does not use RevenueCat or other purchase SDKs.</p>
 
       <h2>3. Usage analytics</h2>
-      <p>Usage analytics is enabled at app startup in this version. There is no in-app analytics permission prompt or off switch.</p>
+      <p>On configured iOS builds, Google Analytics for Firebase may run when <strong>Share usage analytics</strong> is on. The choice defaults to on. You set it during onboarding and can change it anytime in Settings. Collection stays blocked until your saved preference loads, then follows that preference. Android and web builds do not send usage analytics in this version.</p>
       <p>When enabled, Google Analytics for Firebase processes installation and session identifiers, event timestamps, device and app information, and SDK-derived technical metadata. The app sends fixed events about onboarding, check-in activity, selected main screens, and reminder enable or disable actions. Firebase may also collect automatic lifecycle and session events. This is usage measurement, not anonymous measurement.</p>
       <p>The app never sends journal answers, scores, emotions, context labels, notes, metric names or definitions, journal dates or IDs, entry counts, reminder times, insight results, CSV contents, or raw errors to analytics. Visits to the Get Help screen are not explicitly logged as screen events.</p>
       <p>Advertising consent and advertising personalization are disabled. The iOS build excludes advertising-ID support and disables vendor-ID collection. Honest Stress Tracker does not set an analytics user ID, link Google Ads accounts, or enable Google Signals. No App Tracking Transparency permission is requested. Honest Stress Tracker does not show ads and does not use IDFA for advertising.</p>
-      <p>Deleting local journal entries does not erase previously uploaded usage analytics. Analytics event data is configured for two-month retention; aggregate reports can have different retention behavior.</p>
+      <p>Turning <strong>Share usage analytics</strong> off disables further collection and resets local Analytics data on the device. That does not erase data already processed by Google. Deleting local journal entries also does not erase previously uploaded usage analytics. Analytics event data is configured for two-month retention; aggregate reports can have different retention behavior.</p>
       <p>Google’s Firebase privacy information: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></p>
 
       <h2>4. Crash reports</h2>
-      <p>Native crash reporting is enabled at app startup. There is no in-app crash-reporting off switch in this version. Firebase Crashlytics processes native crash stack traces, installation identifiers, crash timestamps, and technical device and app information. Honest Stress Tracker does not attach journal answers, notes, metric configuration, user identifiers, custom logs, or raw JavaScript exceptions. Automatic JavaScript and unhandled-promise reporting are disabled. Native diagnostic reports are technical data, not anonymous or guaranteed personal-data-free.</p>
-      <p>Previously uploaded crash reports are not automatically deleted by journal deletion. Crashlytics has its own retention behavior; the Analytics two-month setting does not control crash-report retention.</p>
+      <p>On configured iOS builds, Firebase Crashlytics may run when <strong>Share crash reports</strong> is on. The choice defaults to on. You set it during onboarding and can change it anytime in Settings. Collection stays blocked until your saved preference loads, then follows that preference. Android and web builds do not send crash reports in this version.</p>
+      <p>When enabled, Firebase Crashlytics processes native crash stack traces, installation identifiers, crash timestamps, and technical device and app information. Honest Stress Tracker does not attach journal answers, notes, metric configuration, user identifiers, custom logs, or raw JavaScript exceptions. Automatic JavaScript and unhandled-promise reporting are disabled. Native diagnostic reports are technical data, not anonymous or guaranteed personal-data-free.</p>
+      <p>Turning <strong>Share crash reports</strong> off disables further collection and deletes unsent reports still on the device. Previously uploaded crash reports are not automatically deleted by that switch or by journal deletion. Crashlytics has its own retention behavior; the Analytics two-month setting does not control crash-report retention.</p>
       <p>Firebase may attach automatic Analytics breadcrumbs containing the fixed usage events to native crash reports when both services are enabled.</p>
 
       <h2>5. Optional audience survey</h2>
-      <p>After onboarding, configured iOS builds may invite you to answer two optional, fixed-choice questions about what brought you to the app and what you would like help with. Answers are sent only when you tap Send answers. Skipping sends no answers. The survey has no free-text field and is separate from your journal.</p>
+      <p>After onboarding, configured iOS builds may invite you to answer two optional, fixed-choice questions about what brought you to the app and what you would like help with when usage analytics is on. Answers are sent only when you tap Send answers. Skipping sends no answers. The survey has no free-text field and is separate from your journal.</p>
       <p>We also collect survey invitation and start events, without answers, to understand participation. Survey events include a survey version. The selected option identifiers are sent to Google Analytics for Firebase in an <code>audience_survey_submitted</code> event to help the developer decide what to build next. Firebase technical and installation/session metadata and the analytics retention rules above also apply to this event. Survey events may appear in automatic Analytics crash breadcrumbs. Only the invitation’s dismissed or submitted status is saved in local app settings; deleting journal entries does not delete submitted survey responses.</p>
 
       <h2>6. External links and support</h2>
       <p>Privacy, support, and crisis-resource links open external websites. Those organizations have their own privacy practices. Honest Stress Tracker does not monitor your safety or contact emergency services for you.</p>
 
       <h2>7. Your choices and rights</h2>
-      <p>Depending on where you live, you may have rights to access, correct, delete, restrict, or object to processing of personal information. You can delete local journal entries in Settings. To ask about analytics or crash data associated with the app, email us using the address below.</p>
+      <p>Depending on where you live, you may have rights to access, correct, delete, restrict, or object to processing of personal information. In the app you can:</p>
+      <ul>
+        <li>Turn <strong>Share usage analytics</strong> and <strong>Share crash reports</strong> on or off in Settings (and during onboarding).</li>
+        <li>Delete local journal entries in Settings.</li>
+        <li>Export or import a CSV of check-ins.</li>
+      </ul>
+      <p>To ask about analytics or crash data associated with the app, email us using the address below.</p>
 
       <h2>8. Contact</h2>
       <p>For privacy and support questions, contact:<br><a href="mailto:support@kostin.app">support@kostin.app</a><br>Mikhail Kostin, Poland</p>
