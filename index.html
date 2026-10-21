@@ -18,6 +18,56 @@
     <main>
       <h1>Honest Stress Tracker</h1>
       <p>A private daily stress journal with check-ins, calendar history, and patterns from your own data. No account required.</p>
+
+      <section class="demo" aria-label="App preview">
+        <div class="demo-card">
+          <p class="demo-label">Example · Stress ratings</p>
+          <div class="demo-calendar" id="demo-calendar"></div>
+        </div>
+
+        <div class="demo-card">
+          <p class="demo-label">Try a check-in</p>
+          <p class="demo-prompt">How stressful has today been?</p>
+          <p class="demo-hint">Choose the rating that fits your day.</p>
+
+          <div class="demo-slider" id="demo-slider">
+            <div class="demo-slider-header">
+              <span class="demo-metric-name">Stress</span>
+              <span class="demo-value-chip" id="demo-value-chip" aria-live="polite">
+                <span class="demo-value" id="demo-value">Select value</span><span class="demo-value-max" id="demo-value-max"></span>
+              </span>
+            </div>
+            <div class="demo-scale-numbers" aria-hidden="true">
+              <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+            </div>
+            <div class="demo-slider-row">
+              <button type="button" class="demo-step" id="demo-dec" aria-label="Decrease Stress" disabled>−</button>
+              <input
+                type="range"
+                id="demo-range"
+                class="demo-range"
+                min="0"
+                max="10"
+                step="1"
+                value="5"
+                aria-label="Stress"
+              >
+              <button type="button" class="demo-step" id="demo-inc" aria-label="Increase Stress">+</button>
+            </div>
+            <div class="demo-endpoints">
+              <span>No stress</span>
+              <span>Highest stress</span>
+            </div>
+          </div>
+
+          <p class="demo-prompt demo-context-title">What was happening today?</p>
+          <p class="demo-hint" id="demo-stress-summary">Add details you want to remember.</p>
+          <p class="demo-label">Stress factors</p>
+          <div class="demo-chips" id="demo-chips" role="group" aria-label="Stress factors"></div>
+          <p class="demo-footnote">Demo only. Nothing is saved.</p>
+        </div>
+      </section>
+
       <ul class="document-list">
         <li><a href="privacy-policy.html">Privacy Policy</a></li>
         <li><a href="terms-of-use.html">Terms of Use</a></li>
@@ -26,5 +76,6 @@
     </main>
     <footer>© 2026 Mikhail Kostin · <a href="mailto:support@kostin.app">support@kostin.app</a></footer>
   </div>
+  <script src="js/demo.js" defer></script>
 </body>
 </html>
